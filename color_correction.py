@@ -19,5 +19,5 @@ def correct_colors(image_path):
     cv2.imwrite("C:/Users/USER/Desktop/PC4/pc4_result.jpg", corrected_image)
 
 if __name__ == "__main__":
-    image_path = r'C:/Users/USER/image.jpg'  
+    image_path = r'C:/Users/USER/Desktop/PC4/image.jpg'  
     correct_colors(image_path)

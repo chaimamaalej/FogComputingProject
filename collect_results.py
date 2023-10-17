@@ -6,7 +6,7 @@ import os
 result_folder = "C:\\wamp\\www\\uploads\\uploaded"
 
 # Obtenez la liste des noms de fichiers des images résultantes
-result_files = [os.path.join(result_folder, file) for file in os.listdir(result_folder) if file.endswith(".jpg")]
+result_files = [os.path.join(result_folder, file) for file in os.listdir(result_folder) if file.startswith("pc") and file.endswith("_result.jpg")]
 
 # Assurez-vous que vous avez récupéré des fichiers d'image
 if not result_files:
@@ -16,6 +16,10 @@ if not result_files:
 # Charger les images résultantes depuis chaque PC client
 images = [cv2.imread(file) for file in result_files]
 
+# Vérifiez si au moins 3 images ont été trouvées
+if len(images) < 3:
+    print("Il faut au moins 3 images résultantes pour la fusion.")
+    exit()
 
 for i in range(1, len(images)):
     if images[i].shape != images[0].shape:
@@ -27,3 +31,4 @@ result_image = np.mean(images, axis=0).astype(np.uint8)
 
 # Enregistrez l'image finale
 cv2.imwrite("C:\\wamp\\www\\uploads\\uploaded\\final_result.jpg", result_image)
+
