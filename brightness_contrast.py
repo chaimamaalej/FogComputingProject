@@ -18,6 +18,6 @@ def adjust_brightness_contrast(image_path):
     print("Ajustement de la luminosité et du contraste terminé. Image enregistrée sous pc3_result.jpg")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     image_path = "C:/Users/User/Desktop/PC3/image.jpg"
     adjust_brightness_contrast(image_path)
