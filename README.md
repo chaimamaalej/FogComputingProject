@@ -36,6 +36,12 @@ One image is enhanced by several machines of a local fog network: each client PC
 
 `image.jpg` is the input; `pc*_result.jpg` and `final_result.jpg` are sample outputs.
 
+## Results
+
+| Input | PC2 — sharpening | PC3 — brightness / contrast | PC4 — colour | Final (merged) |
+|---|---|---|---|---|
+| <img src="image.jpg" width="150" alt="Input image"> | <img src="pc2_result.jpg" width="150" alt="Sharpened"> | <img src="pc3_result.jpg" width="150" alt="Brightness and contrast"> | <img src="pc4_result.jpg" width="150" alt="Colour corrected"> | <img src="final_result.jpg" width="150" alt="Merged result"> |
+
 ## Run it
 
 ```bash
