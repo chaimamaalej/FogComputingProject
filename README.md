@@ -45,7 +45,7 @@ One image is enhanced by several machines of a local fog network: each client PC
 ## Run it
 
 ```bash
-pip install opencv-python numpy
+pip install "opencv-python<5" numpy
 ```
 
 1. On each client PC, set `image_path` in its script, then run it (e.g. `python sharpening.py`).
